@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    width: 300px;
+    border: 1px solid black;
+
+}
+.display {
+    display: flex;
+    align-content: center;
+    /* align-items: center;
+    justify-content: center;
+    justify-items: center; */
+    height: 50px;
+    width: 270px;
+    border: 1px solid black;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
