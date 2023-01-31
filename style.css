@@ -8,28 +8,53 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 250px;
+    height: 220px;
     width: 180px;
     border: 1px solid black;
     border-radius: 2ch;
     background-color: gray;
 
 }
+
+.top {
+    display: flex;
+    flex-direction:row;
+    align-items: flex-end;
+    justify-content: end;
+    
+
+}
 .display {
     display: flex;
+    flex-direction: column;
     align-content: center;
-    /* align-items: center;
-    justify-content: center;
-    justify-items: center; */
-    height: 50px;
-    width: 130px;
+    height: 30px;
+    width: 100px;
     border: 1px solid black;
-    border-radius: 1ch;
     background-color: white;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 
 .inputs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+}
+
+#clear {
+    margin-right: 6px;
+}
+
+.previous {
+    font-size: 12px;
+}
+.current {
+    font-size: 15px;
 }
