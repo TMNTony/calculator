@@ -25,16 +25,17 @@ operators.forEach((op) => op.addEventListener('click', function(e){
     current.textContent = currentValue
 }));
 
-// decimal.forEach((decimal) =>
-// decimal.addEventListener('click', function(e){
-//     handleDecimal(e.target.textContent)
-// }));
 
-// equal.forEach((equal) =>
-// equal.addEventListener('click', function(e){
-//     handleEqual(e.target.textContent)
-// }));
-// // outputs returned on display
+decimal.addEventListener('click', function(){
+    addDecimal()
+});
+
+equal.addEventListener('click', function(){
+    calculate()
+    previous.textContent = " "
+    current.textContent = previousValue
+})
+
 clear.addEventListener('click', function(e){
     currentValue = " "
     previousValue = " "
@@ -55,4 +56,25 @@ console.log(op)
     currentValue = ''
 }
 
+function addDecimal(){
+    if(!currentValue.includes (".")) {
+        currentValue += "."
+    }
+}
 
+function calculate(){
+    previousValue = Number(previousValue)
+    currentValue = Number(currentValue)
+    if (operator === "+") {
+        previousValue += currentValue
+    }
+    else if (operator === "-") {
+        previousValue -= currentValue
+    }
+    else if (operator === "x") {
+        previousValue *= currentValue
+    }
+    else {
+        previousValue /= currentValue
+    }
+}
